@@ -24,7 +24,7 @@ export class ListPage implements OnInit {
     for (let i = 1; i < 11; i++) {
       this.items.push({
         title: 'Item ' + i,
-        note: 'This is item #' + i,
+        note: 'This is PART #' + i,
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });
     }
