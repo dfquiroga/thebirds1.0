@@ -14,7 +14,12 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  { path: 'menu', loadChildren: './menu/menu.module#MenuPageModule' },
+  { path: 'listado', loadChildren: './listado/listado.module#ListadoPageModule' },
+  { path: 'detalle', loadChildren: './detalle/detalle.module#DetallePageModule' },
+  { path: 'aveagregar', loadChildren: './aveagregar/aveagregar.module#AveagregarPageModule' },
+  { path: 'avistamientoagregar', loadChildren: './avistamientoagregar/avistamientoagregar.module#AvistamientoagregarPageModule' }
 ];
 
 @NgModule({
