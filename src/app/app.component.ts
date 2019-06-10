@@ -18,6 +18,16 @@ export class AppComponent {
       url: '/home',
       icon: 'Home'
     },
+    {
+      title: 'Menu Principal',
+      url: '/menu',
+      icon: 'Home'
+    },
+    {
+      title: 'Listado',
+      url: '/listado',
+      icon: 'list'
+    },
     
   ];
 

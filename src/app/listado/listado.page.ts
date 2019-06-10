@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-
+import { Router } from '@angular/router';
+import { DetallePage } from '@../detalle/detalle.page';
 
 @Component({
   selector: 'app-listado',
@@ -15,13 +15,18 @@ export class ListadoPage implements OnInit {
   constructor(
  
     private httpClient:HttpClient,
-   // public navCtrl: NavController
+   private router: Router
 
   ) {
   }
   ngOnInit() {
   this.getList();
   
+  }
+
+  onDetail(id){
+    localStorage.setItem('idBird', id)
+    this.router.navigate(['/detalle']);
   }
 
   	getList(){
@@ -36,12 +41,5 @@ export class ListadoPage implements OnInit {
   }
 
 
-  /*goTo(pajaro) {
-    pajaro = pajaro || 'No bird Entered';
-
-    this.navCtrl.push(DetallePage, {
-      id: pajaro
-    });
-  }
-*/
+ 
 }

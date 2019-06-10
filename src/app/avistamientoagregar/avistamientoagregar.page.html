@@ -1,4 +1,8 @@
 <ion-header>
+		<ion-buttons slot="start">
+      <ion-back-button icon="return-left"></ion-back-button>
+    <ion-icon size="large" [routerLink]="['/menu']" name="home">Inicio</ion-icon>
+    </ion-buttons>
   <ion-toolbar>
     <ion-title>avistamientoagregar</ion-title>
   </ion-toolbar>
@@ -6,10 +10,6 @@
 
 <ion-content>
 	<form #form="ngForm" (ngSubmit)="agregarAvistamiento(form)" novalidate>
-      <ion-item>
-        <ion-label>ID</ion-label>
-        <ion-input type="text"  [(ngModel)]="form.idAve" name="id"></ion-input>
-      </ion-item>
       <ion-item>
         <ion-label>Lugar</ion-label>
         <ion-input type="text"  [(ngModel)]="form.place" name="place"></ion-input>

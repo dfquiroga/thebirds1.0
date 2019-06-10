@@ -1,5 +1,10 @@
 <ion-header>
+  	 <ion-buttons slot="start">
+      <ion-back-button icon="return-left"></ion-back-button>
+  	<ion-icon size="large" [routerLink]="['/menu']" name="home">Inicio</ion-icon>
+    </ion-buttons>
   <ion-toolbar>
+
     <ion-title>{{pajaro.bird_name}}</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,7 +18,7 @@
          		{{pajaro.bird_description}}	<br>
          <ion-content>
 
-		<button>Añadir avistamiento</button> <br>
+		<ion-button expand="full" (click)="onAvistamiento(pajaro.id)">Añadir avistamiento</ion-button> <br>
 		<div *ngFor="let avistamiento of pajaro.sightings_list">
  			Visto en:	{{avistamiento.place}} Coordenadas:{{avistamiento.lat}} /{{avistamiento.long}}
  		</div>

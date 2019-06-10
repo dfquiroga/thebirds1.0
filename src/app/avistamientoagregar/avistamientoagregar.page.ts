@@ -19,7 +19,7 @@ export class AvistamientoagregarPage implements OnInit {
   	console.log(form.pass);
     this.httpClient.post(`http://dev.contanimacion.com/birds/public/addSighting/`,
     {
-      idAve:form.idAve,
+      idAve: localStorage.getItem('idBirdAvistada'),
       place: form.place,
       lat:form.lat,
       long:form.long
