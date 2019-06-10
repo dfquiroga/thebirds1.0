@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-avistamientoagregar',
   templateUrl: './avistamientoagregar.page.html',
@@ -9,7 +10,8 @@ export class AvistamientoagregarPage implements OnInit {
 
  constructor(
  
-    private httpClient:HttpClient
+    private httpClient:HttpClient,
+    private router: Router
   ){}
   ngOnInit() {
   }
@@ -32,6 +34,7 @@ export class AvistamientoagregarPage implements OnInit {
 
       }
     )
+    this.router.navigate(['/detalle']);
   }
 
 }

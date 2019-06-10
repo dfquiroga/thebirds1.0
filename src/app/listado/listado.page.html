@@ -15,7 +15,7 @@
 	<ion-item >		
 		<ion-img  style="width: 80px; height: 80px;" src="{{birds.bird_image}}"></ion-img> <br>
 		 <ion-label>
-               <ion-button expand="full"  (click)="onDetail(birds.id)" > {{birds.id}}{{birds.bird_name}}</ion-button> (visto {{birds.bird_sightings}} veces)
+               <ion-button expand="full"  (click)="onDetail(birds.id)" > {{birds.id}}{{birds.bird_name}}</ion-button> (visto {{birds.bird_sightings}} veces) {{birds.mine}}
                	
               </ion-label>
 	</ion-item>
