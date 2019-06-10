@@ -5,5 +5,23 @@
 </ion-header>
 
 <ion-content>
-
+	<form #form="ngForm" (ngSubmit)="agregarAvistamiento(form)" novalidate>
+      <ion-item>
+        <ion-label>ID</ion-label>
+        <ion-input type="text"  [(ngModel)]="form.idAve" name="id"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Lugar</ion-label>
+        <ion-input type="text"  [(ngModel)]="form.place" name="place"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Latitud</ion-label>
+        <ion-input type="text"  [(ngModel)]="form.lat" name="lat"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Longitud</ion-label>
+        <ion-input type="text"  [(ngModel)]="form.long" name="long"></ion-input>
+      </ion-item>
+      <button ion-button type="submit" block>Agregar</button>
+    </form>
 </ion-content>

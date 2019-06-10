@@ -1,9 +1,19 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>listado</ion-title>
+    <ion-title>LISTADO DE AVES </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
+ <ion-list>
+ 	<div *ngFor="let birds of listadoPajaros">
+ 		
 
+	<ion-item >		
+		<ion-img  style="width: 80px; height: 80px;" src="{{birds.bird_image}}"></ion-img> <br>
+		 <ion-label>
+               <a href="/detalle"> {{birds.bird_name}}</a> (visto {{birds.bird_sightings}} veces)
+              </ion-label>
+	</ion-item>
+ 	</div>
+ </ion-list>
 </ion-content>

@@ -5,5 +5,31 @@
 </ion-header>
 
 <ion-content>
-
+		<form #form="ngForm" (ngSubmit)="agregarAve(form)" novalidate>
+      <ion-item>
+        <ion-label>idUser</ion-label>
+        <ion-input type="text"  [(ngModel)]="form.idUser" name="idUser"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>bird_name</ion-label>
+        <ion-input type="text"  [(ngModel)]="form.bird_name" name="bird_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>bird_description</ion-label>
+        <ion-input type="text"  [(ngModel)]="form.bird_description" name="bird_description"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>place</ion-label>
+        <ion-input type="text"  [(ngModel)]="form.place" name="place"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>long</ion-label>
+        <ion-input type="text"  [(ngModel)]="form.long" name="long"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>lat</ion-label>
+        <ion-input type="text"  [(ngModel)]="form.lat" name="lat"></ion-input>
+      </ion-item>
+      <button ion-button type="submit" block>Agregar</button>
+    </form>
 </ion-content>

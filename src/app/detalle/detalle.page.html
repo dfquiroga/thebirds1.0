@@ -1,9 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>detalle</ion-title>
+    <ion-title>{{pajaro.bird_name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+	<ion-img  style="width: 500px; height: 500px;" src="{{pajaro.bird_image}}"></ion-img> <br>
+		 <ion-label>
+               (visto {{pajaro.bird_sightings}} veces)
+              </ion-label> <br>
+         	Descripción:
+         		{{pajaro.bird_description}}	<br>
+         <ion-content>
 
+		<button>Añadir avistamiento</button> <br>
+		<div *ngFor="let avistamiento of pajaro.sightings_list">
+ 			Visto en:	{{avistamiento.place}} Coordenadas:{{avistamiento.lat}} /{{avistamiento.long}}
+ 		</div>
+		</ion-content>         	
 </ion-content>

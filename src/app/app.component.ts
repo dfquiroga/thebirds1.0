@@ -5,22 +5,20 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { HttpClient } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html'
+  templateUrl: 'app.component.html',
+  providers: []
 })
 export class AppComponent {
   public appPages = [
     {
-      title: 'Home',
+      title: 'Login',
       url: '/home',
-      icon: 'home'
+      icon: 'Home'
     },
-    {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
-    }
+    
   ];
 
   constructor(
@@ -40,16 +38,5 @@ export class AppComponent {
     });
   }
 
-    postProfile(){
-    this.httpClient.post(`http://dev.contanimacion.com/birds/public/login/`,
-    {
-      user:'ivan',
-      password: 'cuadros'
-    })
-    .subscribe(
-      (data:any) => {
-        console.log(data);
-      }
-    )
-  }
+    
 }
