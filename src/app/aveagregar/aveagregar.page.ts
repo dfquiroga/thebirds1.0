@@ -18,7 +18,7 @@ constructor(
   	
     this.httpClient.post(`http://dev.contanimacion.com/birds/public/addBird/`,
     {
-      	idUser: localStorage.setItem('idUser', id),
+      	idUser: localStorage.getItem('idUser'),
 		bird_name: form.bird_name,
 		bird_description: form.bird_description,
 		place: form.place,
